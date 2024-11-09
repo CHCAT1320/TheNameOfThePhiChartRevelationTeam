@@ -52,7 +52,7 @@ function GetBiliUserInfo(uid) {
                 var board = document.getElementById("board");
                 var newBoard = document.createElement('div');
                 newBoard.className = 'board';
-                newBoard.innerHTML = data.msg
+                newBoard.innerHTML = "请求次数太多，请稍后再试"
                 board.appendChild(newBoard);
             }else{
                 var board = document.getElementById("board");
