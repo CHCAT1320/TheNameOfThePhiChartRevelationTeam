@@ -69,6 +69,12 @@ function GetBiliUserInfo(uid) {
                 var newP = document.createElement('p');
                 newP.innerHTML = data.data.sign;
                 newBoard.appendChild(newP);
+                var newButton = document.createElement('button');
+                newButton.innerHTML = "Go BiliBili";
+                newButton.onclick = function() {
+                    window.open('https://space.bilibili.com/' + uid);
+                }
+                newBoard.appendChild(newButton);
                 boardId++;
             }
         } else {
