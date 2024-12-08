@@ -91,7 +91,7 @@ function GetBiliUserInfo(uid) {
                 newH2.innerHTML = data.data.name;
                 newBoard.appendChild(newH2);
                 var newP = document.createElement('p');
-                newP. textContent= data.data.sign;
+                newP.textContent= data.data.sign;
                 newBoard.appendChild(newP);
                 var newButton = document.createElement('button');
                 newButton.innerHTML = "Go BiliBili";
