@@ -88,7 +88,7 @@ function GetBiliUserInfo(uid) {
                 newUserImg.src = data.data.face;
                 newBoard.appendChild(newUserImg);
                 var newH2 = document.createElement('h2');
-                newH2.innerHTML = data.data.name;
+                newH2.textContent = data.data.name;
                 newBoard.appendChild(newH2);
                 var newP = document.createElement('p');
                 newP.textContent= data.data.sign;
