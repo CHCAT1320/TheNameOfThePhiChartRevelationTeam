@@ -53,7 +53,7 @@ var boardId = 0
 function GetBiliUserInfo(uid) {
     // 获取用户 UID
     // var uid = 1644970825;
-    const url = 'https://bzapi.bzweb.xyz/api/public/bili/user?uid=' + uid;
+    const url = 'http://localhost:3000/?url=https://api.bilibili.com/x/web-interface/card?mid=' + uid;
 
     // 创建一个新的XMLHttpRequest对象
     const xhr = new XMLHttpRequest();
