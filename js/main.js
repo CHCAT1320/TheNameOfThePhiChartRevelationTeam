@@ -1,4 +1,4 @@
-async function GetUserJson() {
+function GetUserJson() {
     // var userData = "./json/usersJson.json";
     var userData = {
         "userList":[
@@ -71,6 +71,7 @@ function GetBiliUserInfo(uid) {
             // 解析响应为JSON
             const data = JSON.parse(xhr.responseText);
             console.log('Fetched JSON data:', data);
+            console.log(data.data.card.name)
             // 处理 JSON数据
             if (data.code === -400){
                 var board = document.getElementById("board");
@@ -85,13 +86,13 @@ function GetBiliUserInfo(uid) {
                 newBoard.id = 'board' + boardId;
                 board.appendChild(newBoard);
                 var newUserImg = document.createElement('img');
-                newUserImg.src = data.data.face;
+                // newUserImg.src = data.data.face;
                 newBoard.appendChild(newUserImg);
                 var newH2 = document.createElement('h2');
-                newH2.textContent = data.data.name;
+                newH2.textContent = data.data.card.name;
                 newBoard.appendChild(newH2);
                 var newP = document.createElement('p');
-                newP.textContent= data.data.sign;
+                newP.textContent= data.data.card.sign;
                 newBoard.appendChild(newP);
                 var newButton = document.createElement('button');
                 newButton.innerHTML = "Go BiliBili";
