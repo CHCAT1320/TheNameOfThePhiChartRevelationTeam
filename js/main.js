@@ -86,7 +86,7 @@ function GetBiliUserInfo(uid) {
                 newBoard.id = 'board' + boardId;
                 board.appendChild(newBoard);
                 var newUserImg = document.createElement('img');
-                // newUserImg.src = data.data.face;
+                newUserImg.src = "http://cn-hk-bgp-4.ofalias.net:28643/?url=" + data.data.card.face;
                 newBoard.appendChild(newUserImg);
                 var newH2 = document.createElement('h2');
                 newH2.textContent = data.data.card.name;
